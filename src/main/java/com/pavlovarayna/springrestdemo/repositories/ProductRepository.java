@@ -12,7 +12,7 @@ public interface ProductRepository {
 
     List<Product> getProductsByCategory(String category);
 
-    Product getProductByName(String name);
+    Product getProductById(int id);
 
 
 }

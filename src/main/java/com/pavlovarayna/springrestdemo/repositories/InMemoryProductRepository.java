@@ -13,9 +13,9 @@ public class InMemoryProductRepository implements ProductRepository {
     private List<Product> products = new ArrayList<>();
 
     public InMemoryProductRepository(){
-        products.add(new Product("soap", "domestics", "cosmetics", "ml", 50, 10));
-        products.add(new Product("beer", "drinks", "alcohol", "ml", 500, 100));
-        products.add(new Product("chocolate", "food", "sweets", "g", 100, 100));
+        products.add(new Product(1, "soap", "domestics", "cosmetics", "ml", 50, 10));
+        products.add(new Product(2, "beer", "drinks", "alcohol", "ml", 500, 100));
+        products.add(new Product(3, "chocolate", "food", "sweets", "g", 100, 100));
     }
 
 
@@ -31,9 +31,9 @@ public class InMemoryProductRepository implements ProductRepository {
     }
 
     @Override
-    public Product getProductByName(String name) {
+    public Product getProductById(int id) {
         return products.stream()
-                .filter(x->x.getName()==name)
+                .filter(x->x.getId()==id)
                 .findFirst()
                 .orElse(null);
     }

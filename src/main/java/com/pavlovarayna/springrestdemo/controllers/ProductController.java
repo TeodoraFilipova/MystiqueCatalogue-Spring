@@ -24,14 +24,14 @@ public class ProductController {
        return service.getAllProducts();
     }
 
-    @GetMapping("/products/{category}")
+    @GetMapping("/products/category/{category}")
     public List<Product> getProductByCategory(@PathVariable String category){
             return service.getProductsByCategory(category);
     }
 
-    @GetMapping("/products/{name}")
-    public Product getProductByName(@PathVariable String name){
-        return service.getProductByName(name);
+    @GetMapping("/products/{id}")
+    public Product getProductById(@PathVariable int id){
+        return service.getProductById(id);
     }
 
     /*@PostMapping("/new")
@@ -43,7 +43,7 @@ public class ProductController {
     public void deleteProduct(@PathVariable int id){
         service.deleteProduct(id);
     }
-
+    // for buying option
     @PutMapping("/correct/{id}")
     public void updateProductInfo(@PathVariable int id, @RequestBody Product sroduct){
         service.updateProduct(id, product);
