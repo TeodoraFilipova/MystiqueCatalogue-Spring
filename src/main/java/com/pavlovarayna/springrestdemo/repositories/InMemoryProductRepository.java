@@ -13,9 +13,12 @@ public class InMemoryProductRepository implements ProductRepository {
     private List<Product> products = new ArrayList<>();
 
     public InMemoryProductRepository(){
-        products.add(new Product(1, "soap", "domestics", "cosmetics", "ml", 50, 10));
-        products.add(new Product(2, "beer", "drinks", "alcohol", "ml", 500, 100));
-        products.add(new Product(3, "chocolate", "food", "sweets", "g", 100, 100));
+        products.add(new Product(1, "soap", "domestics", "cosmetics", "ml", 50, 10,
+                "http://cdn.shopify.com/s/files/1/0559/2049/products/Strawberry_Soap_Stylised_grande.jpg?v=1422540594"));
+        products.add(new Product(2, "beer", "drinks", "alcohol", "ml", 500, 100,
+                "https://ak.jogurucdn.com/media/image/p15/media_gallery-2016-03-11-8-snigdha_1_8f0028a78131f5e00f61257fff8018ea.jpg"));
+        products.add(new Product(3, "chocolate", "food", "sweets", "g", 100, 100,
+                "https://si.wsj.net/public/resources/images/BN-XI366_DIATRI_P_20180205164158.jpg"));
     }
 
 
