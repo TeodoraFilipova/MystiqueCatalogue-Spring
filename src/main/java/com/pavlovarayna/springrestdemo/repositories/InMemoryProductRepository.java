@@ -19,6 +19,12 @@ public class InMemoryProductRepository implements ProductRepository {
                 "https://ak.jogurucdn.com/media/image/p15/media_gallery-2016-03-11-8-snigdha_1_8f0028a78131f5e00f61257fff8018ea.jpg"));
         products.add(new Product(3, "chocolate", "food", 0, "sweets", "g", 100, 100, 2.45,
                 "https://si.wsj.net/public/resources/images/BN-XI366_DIATRI_P_20180205164158.jpg"));
+        products.add(new Product(4, "toothpaste", "domestics", 0, "cosmetics", "ml", 50, 15, 1.35,
+                "https://zxate13fczb17a0n833z2mnj-wpengine.netdna-ssl.com/wp-content/uploads/2014/09/is-triclosan-toothpaste-safe-825x550.jpg"));
+        products.add(new Product(5, "orange juice", "drinks", 0, "soft drinks", "ml", 200, 50, 2.45,
+                "https://i5.walmartimages.com/asr/fd1a42e2-7145-4a3d-8260-3f486f32106c_1.5b02bf4435767913abebd42f272e21aa.jpeg"));
+        products.add(new Product(6, "brie cheese", "food", 0, "cheese", "g", 200, 20, 5.45,
+                "https://images-na.ssl-images-amazon.com/images/I/51gcn9uuTeL.jpg"));
     }
 
 
