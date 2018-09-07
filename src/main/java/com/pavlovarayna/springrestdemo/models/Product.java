@@ -11,6 +11,7 @@ public class Product {
     private String units;
     private int size;
     private int number;
+    private double price;
     public String imageUrl;
 
     //put field for favourites - boolean
@@ -19,7 +20,7 @@ public class Product {
         //empty constructor needed
     }
 
-    public Product(int id, String name, String category, String type, String units, int size, int number, String imageUrl){
+    public Product(int id, String name, String category, String type, String units, int size, int number, double price, String imageUrl){
         this.id = id;
         this.name = name;
         this.category = category;
@@ -27,6 +28,7 @@ public class Product {
         this.units = units;
         this.size = size;
         this.number = number;
+        this.price = price;
         this.imageUrl = imageUrl;
     }
 
@@ -86,6 +88,14 @@ public class Product {
         this.number = number;
     }
 
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
     public String getImageUrl() {
         return imageUrl;
     }
@@ -93,6 +103,7 @@ public class Product {
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
+
 
 
 }
