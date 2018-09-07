@@ -14,7 +14,7 @@ public class InMemoryProductRepository implements ProductRepository {
 
     public InMemoryProductRepository() {
         products.add(new Product(1, "soap", "domestics", 0, "cosmetics", "ml", 50, 10, 2.35,
-                "http://cdn.shopify.com/s/files/1/0559/2049/products/Strawberry_SoapStylised_grande.jpg?v=1422540594"));
+                "https://cdn.shopify.com/s/files/1/0559/2049/products/cucumber_loofa_st.jpg?v=1422537026"));
         products.add(new Product(2, "beer", "drinks", 0, "alcohol", "ml", 500, 100, 3.69,
                 "https://ak.jogurucdn.com/media/image/p15/media_gallery-2016-03-11-8-snigdha_1_8f0028a78131f5e00f61257fff8018ea.jpg"));
         products.add(new Product(3, "chocolate", "food", 0, "sweets", "g", 100, 100, 2.45,
