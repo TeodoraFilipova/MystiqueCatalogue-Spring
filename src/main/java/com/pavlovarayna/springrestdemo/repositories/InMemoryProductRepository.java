@@ -49,11 +49,12 @@ public class InMemoryProductRepository implements ProductRepository {
     }
 
     @Override
-    public void updateProduct(int id, Product product) {
+    public Product updateProduct(int id, Product product) {
         Product pToUpdate = getProductById(id);
         int index = products.indexOf(pToUpdate);
         products.add(index, product);
         products.remove(index + 1);
+        return product;
     }
 
    /* @Override

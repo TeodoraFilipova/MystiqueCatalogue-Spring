@@ -36,8 +36,9 @@ public class ProductController {
 
     // for buying option
     @PutMapping("/products/update/{id}")
-    public void updateProductInfo(@PathVariable int id, @RequestBody Product product){
+    public Product updateProductInfo(@PathVariable int id, @RequestBody Product product){
         service.updateProduct(id, product);
+        return product;
     }
 
     /*@PostMapping("/new")
