@@ -34,6 +34,12 @@ public class ProductController {
         return service.getProductById(id);
     }
 
+    // for buying option
+    @PutMapping("/update/{id}")
+    public void updateProductInfo(@PathVariable int id, @RequestBody Product product){
+        service.updateProduct(id, product);
+    }
+
     /*@PostMapping("/new")
     public void createProduct(@RequestBody Product Product){
         service.createProduct(product);
@@ -43,12 +49,6 @@ public class ProductController {
     public void deleteProduct(@PathVariable int id){
         service.deleteProduct(id);
     }
-    // for buying option
-    @PutMapping("/correct/{id}")
-    public void updateProductInfo(@PathVariable int id, @RequestBody Product sroduct){
-        service.updateProduct(id, product);
-    }*/
 
-
-
+    */
 }

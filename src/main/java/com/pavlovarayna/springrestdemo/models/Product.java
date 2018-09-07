@@ -7,6 +7,7 @@ public class Product {
     private int id;
     private String name;
     private String category;
+    private int bought;
     private String type;
     private String units;
     private int size;
@@ -20,10 +21,11 @@ public class Product {
         //empty constructor needed
     }
 
-    public Product(int id, String name, String category, String type, String units, int size, int number, double price, String imageUrl){
+    public Product(int id, String name, String category, int bought, String type, String units, int size, int number, double price, String imageUrl){
         this.id = id;
         this.name = name;
         this.category = category;
+        this.bought = bought;
         this.type = type;
         this.units = units;
         this.size = size;
@@ -105,5 +107,11 @@ public class Product {
     }
 
 
+    public int getBought() {
+        return bought;
+    }
 
+    public void setBought(int bought) {
+        this.bought = bought;
+    }
 }
