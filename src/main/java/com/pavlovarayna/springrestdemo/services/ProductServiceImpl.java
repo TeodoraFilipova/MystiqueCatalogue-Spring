@@ -19,15 +19,9 @@ public class ProductServiceImpl implements ProductService {
         this.repository = productRepository;
     }
 
-
     @Override
     public List<Product> getAllProducts() {
         return repository.getAllProducts();
-    }
-
-    @Override
-    public List<Product> getProductsByCategory(String category) {
-        return repository.getProductsByCategory(category);
     }
 
     @Override

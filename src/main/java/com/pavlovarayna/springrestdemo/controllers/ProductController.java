@@ -24,32 +24,17 @@ public class ProductController {
        return service.getAllProducts();
     }
 
-    @GetMapping("/products/category/{category}")
-    public List<Product> getProductByCategory(@PathVariable String category){ //?? @RequestParam (value = "category")
-            return service.getProductsByCategory(category);
-    }
 
     @GetMapping("/products/{id}")
     public Product getProductById(@PathVariable int id){
         return service.getProductById(id);
     }
 
-    // for buying option
+
     @PutMapping("/products/update/{id}")
     public Product updateProductInfo(@PathVariable int id, @RequestBody Product product){
         service.updateProduct(id, product);
         return product;
     }
 
-    /*@PostMapping("/new")
-    public void createProduct(@RequestBody Product Product){
-        service.createProduct(product);
-    }
-
-    @DeleteMapping("/del/{id}")
-    public void deleteProduct(@PathVariable int id){
-        service.deleteProduct(id);
-    }
-
-    */
 }

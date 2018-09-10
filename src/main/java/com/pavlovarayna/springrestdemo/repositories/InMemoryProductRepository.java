@@ -34,11 +34,6 @@ public class InMemoryProductRepository implements ProductRepository {
     }
 
     @Override
-    public List<Product> getProductsByCategory(String category) {
-        return getProduct(category);
-    }
-
-    @Override
     public Product getProductById(int id) {
         return products.stream()
                 .filter(x -> x.getId() == id)
@@ -46,45 +41,15 @@ public class InMemoryProductRepository implements ProductRepository {
                 .orElse(null);
     }
 
-    private List<Product> getProduct(String category) {
-        return products.stream()
-                .filter(product ->
-                        product.getCategory().equals(category))
-                .collect(Collectors.toList());
-        // might have empty list or null??
-    }
 
     @Override
     public Product updateProduct(int id, Product product) {
         Product pToUpdate = getProductById(id);
         int index = products.indexOf(pToUpdate);
-        products.add(index, product);
-        products.remove(index + 1);
+        products.set(index, product);
         return product;
     }
 
-   /* @Override
-    public void updateProduct(int id, Product product) {
-        Product s = getProduct(id);
-        int index = products.indexOf(s);
-        products.add(index, products);
-    }
-
-    @Override
-    public void deleteProduct(int id) {
-        Product s = getStudent(id);
-        products.remove(s);
-    }
-
-    private Product getProduct(int id) {
-        return students.stream()
-                .filter(x->x.getId()==id)
-                .findFirst()
-                .orElse(null);
-    }
-
-
-    */
 
 
 }

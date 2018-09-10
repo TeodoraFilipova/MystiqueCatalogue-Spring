@@ -8,10 +8,7 @@ import java.util.List;
 
 public interface ProductService {
 
-    // we need just getAll
     List<Product> getAllProducts();
-
-    List<Product> getProductsByCategory(String category);
 
     Product getProductById(int id);
 
