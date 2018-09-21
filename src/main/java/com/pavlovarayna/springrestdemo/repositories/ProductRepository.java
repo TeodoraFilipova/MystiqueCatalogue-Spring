@@ -11,6 +11,6 @@ public interface ProductRepository {
 
     Product getProductById(int id);
 
-    Product updateProduct(int id, Product product);
+    void updateProduct(int id, Product product);
 
 }

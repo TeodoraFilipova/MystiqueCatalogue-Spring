@@ -2,13 +2,10 @@ package com.pavlovarayna.springrestdemo.repositories;
 
 import com.pavlovarayna.springrestdemo.models.Product;
 
-import org.springframework.stereotype.Repository;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
-@Repository
+//@Repository
 public class InMemoryProductRepository implements ProductRepository {
     private List<Product> products = new ArrayList<>();
 
@@ -41,13 +38,12 @@ public class InMemoryProductRepository implements ProductRepository {
                 .orElse(null);
     }
 
-
     @Override
-    public Product updateProduct(int id, Product product) {
+    public void updateProduct(int id, Product product) {
         Product pToUpdate = getProductById(id);
         int index = products.indexOf(pToUpdate);
         products.set(index, product);
-        return product;
+        //return product;
     }
 
 
