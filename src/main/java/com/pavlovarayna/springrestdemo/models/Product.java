@@ -2,17 +2,41 @@ package com.pavlovarayna.springrestdemo.models;
 
 //POJO Class - reflection class
 
-public class Product {
+import javax.persistence.*;
 
+@Entity
+@Table(name = "products")
+public class Product {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ProductId")
     private int id;
+
+    @Column(name = "ProductName")
     private String name;
+
+    @Column(name = "ProductCategory")
     private String category;
+
+    @Column(name = "BoughtCount")
     private int bought;
+
+    @Column(name = "ProductType")
     private String type;
+
+    @Column(name = "ProductUnits")
     private String units;
+
+    @Column(name = "ProductSize")
     private int size;
+
+    @Column(name = "ProductNumber")
     private int number;
+
+    @Column(name = "ProductPrice")
     private double price;
+
+    @Column(name = "ProductImage")
     public String imageUrl;
 
     //put field for favourites - boolean
