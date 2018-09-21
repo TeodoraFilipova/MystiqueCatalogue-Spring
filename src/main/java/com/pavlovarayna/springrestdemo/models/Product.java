@@ -130,7 +130,6 @@ public class Product {
         this.imageUrl = imageUrl;
     }
 
-
     public int getBought() {
         return bought;
     }
